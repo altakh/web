@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+{{ block.super }} - Содержание вопроса
+{% endblock %}
+{% block content %}
+<h1>{{ question.title }}</h1>
+<hr>
+<p>{{ question.text }}</p>
+<hr>
+{% for answer in answers %}
+	<h3>{{ answer.text}}</h3>
+{% endfor %}
+{% include "answer_add.html" %}
+{% endblock %}
+
